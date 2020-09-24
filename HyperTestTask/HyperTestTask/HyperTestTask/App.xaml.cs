@@ -1,9 +1,8 @@
-﻿using System;
+﻿using HyperTestTask.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
-
 namespace HyperTestTask
 {
     public partial class App : Application
@@ -12,7 +11,7 @@ namespace HyperTestTask
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new LoginPage());
         }
 
         protected override void OnStart()

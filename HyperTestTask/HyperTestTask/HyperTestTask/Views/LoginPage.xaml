@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:customUi="clr-namespace:HyperTestTask.CustomUI;assembly=HyperTestTask"
+             x:Class="HyperTestTask.Views.LoginPage"
+             BackgroundColor="Wheat">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+    <Grid Grid.Row="1"
+                  RowSpacing="2"
+                  Padding="20,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="60"/>
+                </Grid.RowDefinitions>
+                <Label x:Name="loginInputLabel"
+                       Grid.Row="0"
+                       Text="E-mail"
+                       TextColor="Blue"
+                       FontAttributes="Bold"
+                       VerticalTextAlignment="End"
+                       HorizontalOptions="Start"/>
+                <customUi:CustomEntry x:Name="loginInput"
+                                      Grid.Row="1"
+                                      Text="{Binding Email}"
+                                      FontSize="Title"
+                                      Keyboard="Email"
+                                      HorizontalOptions="Fill"
+                                      BorderThickness="2"
+                                      BorderColor="Black"
+                                      IsSpellCheckEnabled="False"
+                                      TextColor="Black"/>
+            </Grid>
+            <Grid Grid.Row="2"
+                  RowSpacing="2"
+                  Padding="20,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="60"/>
+                </Grid.RowDefinitions>
+                <Label x:Name="passwordInputLabel"
+                       Grid.Row="0"
+                       Text="Password"
+                       TextColor="Blue"
+                       FontAttributes="Bold"
+                       VerticalTextAlignment="End"
+                       HorizontalOptions="Start"/>
+                <customUi:CustomEntry x:Name="passwordInput"
+                                      Grid.Row="1"
+                                      Text="{Binding Password}"
+                                      FontSize="Title"
+                                      HorizontalOptions="Fill"
+                                      TextColor="Black"
+                                      BorderThickness="2"
+                                      BorderColor="Black"
+                                      IsPassword="True"/>
+            </Grid>
+        <Grid Grid.Row="3"
+              RowSpacing="2"
+              Padding="20,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+            <Label x:Name="errorLabel"
+                   Grid.Row="0"
+                   Text="{Binding ErrorMessage}"
+                   TextColor="Red"
+                   FontAttributes="None"
+                   VerticalTextAlignment="End"
+                   HorizontalOptions="Start"/>
+            <Button x:Name="loginButton"
+                    Grid.Row="1"
+                    HeightRequest="60"
+                    BackgroundColor="Blue"
+                    TextColor="White"
+                    Text="Log in"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    Command="{Binding LoginCommand}"/>
+        </Grid>
+    </Grid>
+</ContentPage>

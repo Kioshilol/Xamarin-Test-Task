@@ -10,17 +10,11 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="Fody" Version="6.2.6">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="PropertyChanged.Fody" Version="3.2.9" />
         <PackageReference Include="Xamarin.Forms" Version="4.4.0.991640" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Compile Update="Views\MainPage.xaml.cs">
-        <DependentUpon>MainPage.xaml</DependentUpon>
-        <SubType>Code</SubType>
-      </Compile>
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="ViewModels" />
     </ItemGroup>
 </Project>

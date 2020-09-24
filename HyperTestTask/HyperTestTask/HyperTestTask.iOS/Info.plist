@@ -25,7 +25,7 @@
     <key>CFBundleDisplayName</key>
     <string>HyperTestTask</string>
     <key>CFBundleIdentifier</key>
-    <string>com.companyname.HyperTestTask</string>
+    <string>com.pavel.hyper</string>
     <key>CFBundleVersion</key>
     <string>1.0</string>
     <key>UILaunchStoryboardName</key>
