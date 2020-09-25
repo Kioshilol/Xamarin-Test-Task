@@ -16,7 +16,7 @@ namespace HyperTestTask.iOS.Renderers
         {
             var control = new UITextField
             {
-                BorderStyle = UITextBorderStyle.RoundedRect
+                BorderStyle = UITextBorderStyle.RoundedRect,
             };
             
             control.Layer.BorderWidth = ElementV2.BorderThickness;

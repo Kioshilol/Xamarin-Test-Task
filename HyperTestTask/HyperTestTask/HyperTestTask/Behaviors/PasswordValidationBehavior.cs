@@ -1,4 +1,3 @@
-using HyperTestTask.CustomUI;
 using Xamarin.Forms;
 
 namespace HyperTestTask.Behaviors

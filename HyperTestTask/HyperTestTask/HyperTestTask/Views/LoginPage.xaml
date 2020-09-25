@@ -27,6 +27,7 @@
                        VerticalTextAlignment="End"
                        HorizontalOptions="Start"/>
                 <customUi:CustomEntry x:Name="loginInput"
+                                      Placeholder="Email"
                                       Grid.Row="1"
                                       Text="{Binding Email}"
                                       FontSize="Title"
@@ -52,6 +53,7 @@
                        VerticalTextAlignment="End"
                        HorizontalOptions="Start"/>
                 <customUi:CustomEntry x:Name="passwordInput"
+                                      Placeholder="Password"
                                       Grid.Row="1"
                                       Text="{Binding Password}"
                                       FontSize="Title"

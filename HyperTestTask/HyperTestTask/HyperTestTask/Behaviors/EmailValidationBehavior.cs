@@ -1,5 +1,4 @@
 using System.Text.RegularExpressions;
-using HyperTestTask.CustomUI;
 using Xamarin.Forms;
 
 namespace HyperTestTask.Behaviors

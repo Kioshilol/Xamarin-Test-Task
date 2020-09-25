@@ -2,12 +2,61 @@
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="HyperTestTask.Views.DrawingPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Hello, world!"
-                   VerticalOptions="CenterAndExpand"
-                   HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+             x:Class="HyperTestTask.Views.DrawingPage"
+             BackgroundColor="Wheat">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+    <Grid Grid.Row="1"
+                  RowSpacing="2"
+                  Padding="20,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="60"/>
+                </Grid.RowDefinitions>
+                <Label x:Name="columnsLabel"
+                       Grid.Row="0"
+                       Text="Columns (Width)"
+                       TextColor="Blue"
+                       FontAttributes="Bold"
+                       VerticalTextAlignment="End"
+                       HorizontalOptions="Start"/>
+                <Picker x:Name="columnsPicker"
+                                      Grid.Row="1"
+                                      ItemsSource="{Binding PickerItems}"
+                                      SelectedIndex="{Binding ColumnsFirstItemIndex}"
+                                      FontSize="Title"
+                                      HorizontalOptions="Fill"
+                                      TextColor="Black"/>
+            </Grid>
+            <Grid Grid.Row="2"
+                  RowSpacing="2"
+                  Padding="20,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="60"/>
+                </Grid.RowDefinitions>
+                <Label x:Name="rowsLabel"
+                       Grid.Row="0"
+                       Text="Rows (Height)"
+                       TextColor="Blue"
+                       FontAttributes="Bold"
+                       VerticalTextAlignment="End"
+                       HorizontalOptions="Start"/>
+                <Picker x:Name="rowsPicker"
+                                      Grid.Row="1"
+                                      ItemsSource="{Binding PickerItems}"
+                                      SelectedIndex="{Binding RowsFirstItemIndex}"
+                                      FontSize="Title"
+                                      HorizontalOptions="Fill"
+                                      TextColor="Black" />
+            </Grid>
+        <AbsoluteLayout x:Name="AbsoluteLayout"
+                        Grid.Row="3" />
+            
+    </Grid>
 </ContentPage>
